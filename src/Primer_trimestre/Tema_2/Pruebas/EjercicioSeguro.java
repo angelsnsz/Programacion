@@ -28,7 +28,7 @@ public class EjercicioSeguro {
         } else if (edad >65 && accidentes==false){
             System.out.println("Tu precio es = " + (PrecioFijo * 1.10));
         } else {
-            System.out.println("Tu precio es= " + (PrecioFijo * 1.30));
+            System.out.println("Tu precio es = " + (PrecioFijo * 1.30));
         }
     }
 }
