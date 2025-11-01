@@ -18,7 +18,7 @@ public class Ejercicio_8 {
         if (entero >= 0) {
             return entero;
         } else {
-            return entero - entero - entero;
+            return -entero;
         }
     }
 }

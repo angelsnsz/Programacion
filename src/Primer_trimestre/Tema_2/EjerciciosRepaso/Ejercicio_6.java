@@ -28,5 +28,4 @@ public class Ejercicio_6 {
             return num3;
         }
     }
-
 }
