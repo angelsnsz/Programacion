@@ -1,4 +1,7 @@
 package Primer_trimestre.Tema_2.Ejercicios_3;
+
+import java.util.Scanner;
+
 /*
 Haz dos métodos, una para cifrar() y otro para descifrar() una cadena de caracteres.
 Estos métodos reciben un String y retornan ese String ya cifrado o descifrado.
@@ -9,6 +12,10 @@ Los caracteres que no sean alfabéticos no registrarán ningún cambio.
  */
 public class Ejercicio_8 {
     public static void main(String[] args) {
+        Scanner scanner=new Scanner(System.in);
+        System.out.println("Escribe una cadena:");
+        String cadena=scanner.next();
+        char caracter=cadena.charAt(0);
 
     }
 }
