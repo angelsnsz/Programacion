@@ -15,7 +15,7 @@ public class Ejercicio_1 {
         } else {
             System.out.println("no es primo");
         }
-
+        scanner.close();
     }
 
     static boolean esPrimo(int num, int divisor) {

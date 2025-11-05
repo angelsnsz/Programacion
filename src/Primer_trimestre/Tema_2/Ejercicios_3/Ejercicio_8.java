@@ -12,10 +12,50 @@ Los caracteres que no sean alfabéticos no registrarán ningún cambio.
  */
 public class Ejercicio_8 {
     public static void main(String[] args) {
-        Scanner scanner=new Scanner(System.in);
-        System.out.println("Escribe una cadena:");
-        String cadena=scanner.next();
-        char caracter=cadena.charAt(0);
+        Scanner scanner = new Scanner(System.in);
 
+        String cifrado = "";
+        String descifrado = "";
+
+        System.out.print("Escribe una cadena: ");
+        String cadena = scanner.nextLine();
+
+
+        cifrado = cifrar(cadena);
+        System.out.println("Cifrado: " + cifrado);
+
+        descifrado = descifrar(cadena);
+        System.out.println("Descirado: " + descifrado);
+
+
+        scanner.close();
+    }
+
+    static String cifrar(String cadena) {
+        String cifrado = "";
+        for (int i = 0; i < cadena.length(); i++) {
+            char c = cadena.charAt(i);
+            if (c >= 'a' && c <= 'z') {
+                c = (char) ('a' + (c - 'a' + 2) % 26);
+            } else if (c >= 'A' && c <= 'Z') {
+                c = (char) ('A' + (c - 'A' + 2) % 26);
+            }
+            cifrado += c;
+        }
+        return cifrado;
+    }
+
+    static String descifrar(String cadena) {
+        String descifrado = "";
+        for (int i = 0; i < cadena.length(); i++) {
+            char c = cadena.charAt(i);
+            if (c >= 'a' && c <= 'z') {
+                c = (char) ('a' + (c - 'a' - 2 + 26) % 26);
+            } else if (c >= 'A' && c <= 'Z') {
+                c = (char) ('A' + (c - 'A' - 2 + 26) % 26);
+            }
+            descifrado += c;
+        }
+        return descifrado;
     }
 }
