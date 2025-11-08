@@ -6,6 +6,10 @@ class CalculadoraTest {
 
     @org.junit.jupiter.api.Test
     void suma() {
+        assertEquals(4, Calculadora.suma(2, 2));
+    }
 
+    @org.junit.jupiter.api.Test
+    void multiplica(){
     }
 }
