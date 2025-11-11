@@ -33,5 +33,6 @@ public class FuncionTestUnitarios {
         if (edad<18){
             return -1;
         }
+        return 0;
     }
 }
