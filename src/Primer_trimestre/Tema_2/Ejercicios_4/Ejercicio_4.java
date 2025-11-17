@@ -1,4 +1,7 @@
 package Primer_trimestre.Tema_2.Ejercicios_4;
+
+import java.util.Arrays;
+
 /*
 Desarrolla un programa que ordene los índices de un array de enteros,
 en función del contenido de cada elemento del array, de mayor a menor, es decir,
@@ -6,6 +9,6 @@ hay que almacenar en otro array el índice del array original, en función del c
  */
 public class Ejercicio_4 {
     public static void main(String[] args) {
-
+        int [] enteros= new int[5];
     }
 }
