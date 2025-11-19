@@ -19,6 +19,7 @@ public class Ejercicio_4 {
     }
 
     static double calcularArea(double base, double altura) {
+
         return base * altura;
     }
 }

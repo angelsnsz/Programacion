@@ -15,6 +15,7 @@ public class Ejercicio_7 {
 
     }
     static double gf(double gc) {
+
         return (gc * 9 / 5) + 32;
     }
 

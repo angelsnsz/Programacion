@@ -20,6 +20,7 @@ public class Ejercicio_3 {
 
     }
     static void mensaje(String nombre, int edad) {
+
         System.out.printf("Hola %s!! Tienes %d años", nombre, edad);
     }
 
