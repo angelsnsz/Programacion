@@ -18,14 +18,23 @@ public class Ejercicio_1 {
         Scanner scanner=new Scanner(System.in);
         System.out.println("De cuantos niveles quieres el arbol?");
         int niveles= scanner.nextInt();
-        for (int i=1;i<=niveles;i++){
-            for (int j=1;j<=(2 * i - 1); j++){
+        //ramas
+        for (int i = 1; i <= niveles; i++){
+            for (int j = i ; j < niveles; j++){
+                System.out.print(" ");
+            }
+            for (int j = 1;j <= ((2 * i) - 1); j++){
                 System.out.print("*");
             }
             System.out.println();
         }
-        if (niveles>=5){
+        //tronco
+        for (int i = 1; i < niveles / 2; i++) {
+            for (int j = 1; j < niveles; j++){
+                System.out.print(" ");
+            }
             System.out.println("|");
         }
+        scanner.close();
     }
 }
