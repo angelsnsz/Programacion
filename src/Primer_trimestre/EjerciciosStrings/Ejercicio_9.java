@@ -1,4 +1,4 @@
-package EjerciciosStrings;
+package Primer_trimestre.EjerciciosStrings;
 
 /*
    Escribe un programa que recibe dos cadenas de caracteres y comprueba cuantas veces aparece la primera en la segunda.

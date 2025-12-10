@@ -1,4 +1,4 @@
-package EjerciciosStrings;
+package Primer_trimestre.EjerciciosStrings;
 /*
 Desarrolla una solución que elimine todas las vocales de una frase.
 

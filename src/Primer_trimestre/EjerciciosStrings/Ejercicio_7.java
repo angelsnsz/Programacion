@@ -1,4 +1,4 @@
-package EjerciciosStrings;
+package Primer_trimestre.EjerciciosStrings;
 /*
 Implementa un programa que sume todas las cifras de los números que aparecen en una cadena de caracteres.
 

@@ -1,4 +1,4 @@
-package EjerciciosStrings;
+package Primer_trimestre.EjerciciosStrings;
 
 /*
 Igual al anterior pero sumando los números completos.

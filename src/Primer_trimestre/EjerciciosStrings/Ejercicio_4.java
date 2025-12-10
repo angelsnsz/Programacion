@@ -1,4 +1,4 @@
-package EjerciciosStrings;
+package Primer_trimestre.EjerciciosStrings;
 /*
 Desarrolla un programa que rote una cadena tantas veces como se le indique.
 

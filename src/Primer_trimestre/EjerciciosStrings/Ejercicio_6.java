@@ -1,4 +1,4 @@
-package EjerciciosStrings;
+package Primer_trimestre.EjerciciosStrings;
 
 /*
 Crea un programa que descubra si una palabra es o no palíndroma, es decir se lee igual del derecho que del revés.

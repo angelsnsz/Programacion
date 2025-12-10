@@ -1,6 +1,7 @@
-package EjerciciosStrings;
+package Primer_trimestre.EjerciciosStrings;
 /*
-Crea un programa que averigüe cuál es la palabra que más letras tiene de un String. El String solo contendrá letras y espacios de separación, nada más.
+Crea un programa que averigüe cuál es la palabra que más letras tiene de un String.
+ El String solo contendrá letras y espacios de separación, nada más.
 
 En el ejemplo: “Este Mp3 lo conecto al puerto usb”
 
