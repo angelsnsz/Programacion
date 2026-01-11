@@ -1,4 +1,7 @@
 package Primer_trimestre.EjerciciosStrings;
+
+import java.util.Scanner;
+
 /*
 Desarrolla un programa que averigüe cuantas asignaturas tiene aprobadas un alumno.
  El programa debe leer un String con el nombre de las asignaturas y después otro String con la lista de sus notas.
@@ -20,6 +23,31 @@ El número de asignaturas no es fijo, pueden ser 4, 5, 6 o más.
  */
 public class Ejercicio_17 {
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Introduce la lista de asignaturas, separadas por ':'");
+        String inputAsig = (sc.nextLine());
+        String[] asignaturas = inputAsig.split(":");
+        String inputNotas;
+        String[] notas;
 
+        do {
+            System.out.println("Debe haber el mismo número de notas que de asignaturas.");
+            System.out.println("Introduce la lista de notas, separadas por ':'");
+            inputNotas = sc.nextLine();
+            notas = inputNotas.split(":");
+
+        } while (asignaturas.length != notas.length);
+
+        System.out.println("Las asignaturas aprobadas son: ");
+
+        for (int i = 0; i < asignaturas.length; i++) {
+            int notaParse = Integer.parseInt(notas[i]);
+
+            if (notaParse >= 5) {
+                System.out.print(asignaturas[i] + " ");
+            }
+
+        }
+        sc.close();
     }
 }
