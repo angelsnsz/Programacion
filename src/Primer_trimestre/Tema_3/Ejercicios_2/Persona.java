@@ -110,11 +110,22 @@ public class Persona {
     public void setDNI(){
         this.DNI=DNI;
     }
-    public
-
-
-
-
-
-
+    public char getSexo(){
+        return sexo;
+    }
+    public void setSexo(){
+        this.sexo=sexo;
+    }
+    public double getPeso(){
+        return peso;
+    }
+    public void setPeso(){
+        this.peso=peso;
+    }
+    public double getAltura(){
+        return altura;
+    }
+    public void setAltura(){
+        this.altura=altura;
+    }
 }
