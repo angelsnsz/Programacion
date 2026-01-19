@@ -56,12 +56,12 @@ public class Persona {
     }
 
     public int calcularIMC(){
-        if (peso/altura*2<20){
-            System.out.println("-1");
-        } else if (peso/altura*2>20 & peso/altura*2<25) {
-            System.out.println("0");
-        }else if (peso/altura*2>25){
-            System.out.println();
+        if (peso/altura*altura<20){
+            return -1;
+        } else if (peso/altura*altura>20 & peso/altura*altura<25) {
+            return 0;
+        }else if (peso/altura*altura>25){
+            return 1;
         }
     }
     public boolean esMayorDeEdad(){
