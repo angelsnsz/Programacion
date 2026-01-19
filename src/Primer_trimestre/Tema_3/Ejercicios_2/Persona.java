@@ -1,4 +1,7 @@
-package Primer_trimestre.Tema_3.Ejercicios_1;
+package Primer_trimestre.Tema_3.Ejercicios_2;
+
+import java.util.Random;
+
 /*
 Haz una clase llamada Persona que siga las siguientes condiciones:
 Sus atributos son: nombre, edad, DNI, sexo (H hombre, M mujer), peso y altura. No queremos que se accedan directamente a ellos.
@@ -52,7 +55,7 @@ public class Persona {
         this.altura=altura;
     }
 
-    public void calcularIMC(){
+    public int calcularIMC(){
         if (peso/altura*2<20){
             System.out.println("-1");
         } else if (peso/altura*2>20 & peso/altura*2<25) {
@@ -61,6 +64,54 @@ public class Persona {
             System.out.println();
         }
     }
+    public boolean esMayorDeEdad(){
+        if (edad>18){
+            return true;
+        }else {
+            return false;
+        }
+    }
+    public char comprobarSexo(){
+        if (sexo!='H'&& sexo!='M'){
+            this.sexo='H';
+            return this.sexo;
+        }else {
+            return sexo;
+        }
+    }
+    public String toString(){
+        return "Nombre: " + nombre + " Edad: "+ edad + " Sexo: "+ sexo + " Peso: " + peso + " Altura: " + altura + " DNI: " + DNI ;
+    }
+    private String generaDNI(){
+        String DNI;
+        Random r= new Random();
+        int n=r.nextInt(90000000) + 10000000;
+        DNI="" +n;
+        char[] letras ={'T','R','W','A','G','M','Y','F','P','D','X','B','N','J','Z','S','Q','V','H','L','C','K','E'};
+        DNI +=letras[n % 23];
+        return DNI;
+    }
+
+    public String getNombre(){
+        return nombre;
+    }
+    public void setNombre(String nombre){
+        this.nombre=nombre;
+    }
+    public int getEdad(){
+        return edad;
+    }
+    public void setEdad(){
+        this.edad=edad;
+    }
+    public String getDNI(){
+        return DNI;
+    }
+    public void setDNI(){
+        this.DNI=DNI;
+    }
+    public
+
 
 
 

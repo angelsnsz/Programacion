@@ -12,5 +12,10 @@ La clase debe poseer los siguientes métodos:
 - Otro metodo que dibuje en pantalla el rectángulo mediante asteriscos, utilizando tantas columnas como valor tenga el largo y tantas filas como valor tenga el ancho. Por ejemplo, si el ancho valiera 3 y el largo valiera 12, se debería desplegar así:
  */
 public class Rectangulo {
+    private int largo;
+    private int ancho;
 
+    public Rectangulo(){
+
+    }
 }
