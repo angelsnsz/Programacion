@@ -56,16 +56,16 @@ public class Persona {
     }
 
     public int calcularIMC(){
-        if (peso/altura*altura<20){
+        if (peso/(altura*altura) < 20){
             return -1;
-        } else if (peso/altura*altura>20 & peso/altura*altura<25) {
-            return 0;
-        }else if (peso/altura*altura>25){
+        } else if (peso/(altura*altura) > 25){
             return 1;
+        }else {
+            return 0;
         }
     }
     public boolean esMayorDeEdad(){
-        if (edad>18){
+        if (edad >= 18){
             return true;
         }else {
             return false;
@@ -86,7 +86,7 @@ public class Persona {
         String DNI;
         Random r= new Random();
         int n=r.nextInt(90000000) + 10000000;
-        DNI="" +n;
+        DNI="" + n;
         char[] letras ={'T','R','W','A','G','M','Y','F','P','D','X','B','N','J','Z','S','Q','V','H','L','C','K','E'};
         DNI +=letras[n % 23];
         return DNI;

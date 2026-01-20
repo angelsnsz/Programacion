@@ -19,13 +19,26 @@ public class Robot {
     }
 
     public void mostrarEstadisticas(){
-        System.out.println();
+        System.out.printf("El robot %s modelo %s tiene %.2f de vida, hace %.2f de daño y tiene un blindaje de %.2f\n", nombre, modelo, vida, potenciaAtaque, blindaje);
     }
-    public void recibirDano(){
-
+    public void recibirDano(double cantidad){
+        double real = cantidad - blindaje;
+        if (real > 0) {
+            if (vida - real >= 0) {
+                vida -= real;
+            } else {
+                vida = 0;
+            }
+        }
     }
-    public void atacar(){
-
+    public void atacar(Robot enemigo){
+        if (vida <= 0) {
+            System.out.println("El robot " + nombre + " está destruido y no puede atacar");
+        } else if (enemigo.vida <= 0) {
+            System.out.println("El enemigo ya está vencido");
+        } else {
+            enemigo.recibirDano(potenciaAtaque);
+        }
     }
     public boolean estaVivo(){
         if (vida>0){
@@ -33,5 +46,9 @@ public class Robot {
         }else {
             return false;
         }
+    }
+
+    public double getVida() {
+        return vida;
     }
 }
