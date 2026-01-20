@@ -1,6 +1,6 @@
 package Primer_trimestre.Tema_3.Ejercicios_1;
 
-public class Main_Rectangulo {
+public class Main {
     public static void main(String[] args) {
         Rectangulo r1 = new Rectangulo(2, 9);
         Rectangulo r2 = new Rectangulo();
