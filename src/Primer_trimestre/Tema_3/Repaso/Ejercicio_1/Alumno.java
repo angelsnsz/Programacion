@@ -1,4 +1,4 @@
-package Primer_trimestre.Tema_3.Repaso;
+package Primer_trimestre.Tema_3.Repaso.Ejercicio_1;
 
 public class Alumno {
     //Atributos private
@@ -19,9 +19,9 @@ public class Alumno {
         return nota;
     }
     public void imprimir(){
-        System.out.println(nombre + "tiene de nota"+ nota);
+        System.out.println(nombre + " tiene de nota "+ nota);
     }
     public  String toString(){
-        return  nombre + "tiene de nota" + nota;
+        return  nombre + " tiene de nota " + nota;
     }
 }

@@ -1,4 +1,4 @@
-package Primer_trimestre.Tema_3.Repaso;
+package Primer_trimestre.Tema_3.Repaso.Ejercicio_2;
 
 public class Movil {
     String marca;
