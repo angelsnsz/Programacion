@@ -2,6 +2,9 @@ package Primer_trimestre.Tema_4.Fechas_basico;
 
 import java.time.Period;
 import java.util.Scanner;
+import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
+import java.util.Scanner;
 
 /*
 Crea un programa que pida al usuario su fecha de nacimiento (día y mes)
@@ -9,12 +12,23 @@ y calcule cuántos días faltan para su próximo cumpleaños desde hoy (02/04/20
  */
 public class Ejercicio_2 {
     public static void main(String[] args) {
-        Scanner scanner= new Scanner(System.in);
 
-        System.out.println("Escribe cuando es tu cumpleaños dia y mes:");
-        String cumple= scanner.next();
+        Scanner sc = new Scanner(System.in);
 
+        System.out.print("Introduce día de nacimiento: ");
+        int dia = sc.nextInt();
 
+        System.out.print("Introduce mes de nacimiento: ");
+        int mes = sc.nextInt();
 
+        LocalDate hoy = LocalDate.of(2025, 4, 2);
+        LocalDate cumple = LocalDate.of(2025, mes, dia);
+
+        if (cumple.isBefore(hoy) || cumple.isEqual(hoy)) {
+            cumple = cumple.plusYears(1);
+        }
+
+        long dias = ChronoUnit.DAYS.between(hoy, cumple);
+        System.out.println("Faltan " + dias + " días para tu próximo cumpleaños");
     }
 }
