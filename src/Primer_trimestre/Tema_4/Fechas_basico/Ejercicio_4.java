@@ -8,14 +8,11 @@ Crea un método que reciba una fecha (LocalDate) y devuelva si es sábado o domi
  */
 public class Ejercicio_4 {
     public static void main(String[] args) {
-        public static boolean esFinDeSemana(LocalDate fecha) {
-            DayOfWeek dia = fecha.getDayOfWeek();
-            return dia == DayOfWeek.SATURDAY || dia == DayOfWeek.SUNDAY;
-        }
-
-        public static void main(String[] args) {
-            LocalDate fecha = LocalDate.of(2025, 4, 5);
-            System.out.println(esFinDeSemana(fecha));
-        }
+        LocalDate fecha = LocalDate.of(2025, 4, 5);
+        System.out.println(esFinDeSemana(fecha));
+    }
+    public static boolean esFinDeSemana(LocalDate fecha) {
+        DayOfWeek dia = fecha.getDayOfWeek();
+        return dia == DayOfWeek.SATURDAY || dia == DayOfWeek.SUNDAY;
     }
 }
