@@ -2,7 +2,9 @@ package Primer_trimestre.Tema_4.Fechas_viaje;
 
 import java.time.Duration;
 import java.time.LocalTime;
-import java.time.ZoneId;/*
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
+/*
 Estás de merecidas vacaciones, y tienes que coger un vuelo para ir a Japón. Los tiempos son los siguientes.
 
 Sales el día 12 de abril del 2025 a las 20:45 de Madrid, y tienes 6:45 de vuelo hasta Doha.
@@ -23,7 +25,7 @@ Calcula el tiempo total del viaje (incluida escala).
 
 Si llegas un sábado o domingo, avisa a tus amigos con un whatsapp.
  */
-import java.time.ZonedDateTime;
+
 
 public class Ejercicio_1 {
     public static void main(String[] args) {
