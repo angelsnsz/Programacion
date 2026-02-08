@@ -1,10 +1,10 @@
 package Primer_trimestre.Tema_4.Herencia.Restaurante;
 
-public class PlatoCarne extends Plato{
+public class Carnes extends Plato{
 
     String coccion;
 
-    public PlatoCarne(String nombre, double precio, String coccion) {
+    public Carnes(String nombre, double precio, String coccion) {
         super(nombre, precio);
         this.coccion = coccion;
     }

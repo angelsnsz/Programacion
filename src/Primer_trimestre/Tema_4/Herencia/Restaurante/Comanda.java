@@ -1,7 +1,5 @@
 package Primer_trimestre.Tema_4.Herencia.Restaurante;
 
-import java.util.Arrays;
-
 public class Comanda {
 
     int numMesa;
@@ -24,8 +22,8 @@ public class Comanda {
 
     public boolean hayDiabeticosEnLaMesa() {
         for (Plato p : platos) {
-            if (p instanceof PlatoPostre) {
-                if (!((PlatoPostre) p).getconAzucar()) {
+            if (p instanceof Postres) {
+                if (!((Postres) p).getconAzucar()) {
                     return true;
                 }
             }

@@ -1,10 +1,10 @@
 package Primer_trimestre.Tema_4.Herencia.Restaurante;
 
-public class PlatoPostre extends Plato{
+public class Postres extends Plato{
 
     boolean conAzucar;
 
-    public PlatoPostre(String nombre, double precio, boolean conAzucar) {
+    public Postres(String nombre, double precio, boolean conAzucar) {
         super(nombre, precio);
         this.conAzucar = conAzucar;
     }
