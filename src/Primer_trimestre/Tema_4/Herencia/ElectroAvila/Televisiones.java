@@ -2,13 +2,12 @@ package Primer_trimestre.Tema_4.Herencia.ElectroAvila;
 
 public class Televisiones extends Electrodomestico{
     int tamanio;
-    boolean sintonizadorTDT;
-    String tipo;
-    public Televisiones(int precioBase, String color, char consumoEnergetico, double peso, int tamanio,boolean sintonizadorTDT,String tipo) {
+    boolean esOLED;
+
+    public Televisiones(int precioBase, String color, char consumoEnergetico, double peso, int tamanio,boolean esOLED) {
         super(precioBase, color, consumoEnergetico, peso);
         this.tamanio=tamanio;
-        this.sintonizadorTDT=sintonizadorTDT;
-        this.tipo=tipo;
+        this.esOLED=esOLED;
     }
     public double reglaNegocioA (int tamanio){
         if (tamanio>60){
@@ -17,8 +16,8 @@ public class Televisiones extends Electrodomestico{
             return precioBase;
         }
     }
-    public double reglaNegocioB (String tipo){
-        if (tipo.equals("OLED")){
+    public double reglaNegocioB (boolean esOLED){
+        if (esOLED){
             return precioBase + 250;
         }else{
             return precioBase;

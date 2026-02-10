@@ -12,16 +12,18 @@ public abstract class Electrodomestico {
         this.consumoEnergetico = consumoEnergetico;
         this.peso = peso;
     }
-    public String registrarColor (String color){
-        if (color.equals("Blanco,Negro,Rojo,Azul,Gris")){
-
-        }else {
-         return "Blanco";
+    public String registrarColor(String color){
+        String[] colores = {"Blanco", "Negro","Rojo","Azul","Gris"};
+        for (String c : colores) {
+            if (color.equals(c)){
+                return color;
+            }
         }
+        return "Blanco";
     }
     public char introducirConsumo(char consumoEnergetico){
-        if (consumoEnergetico == 'A' | 'B'){
-
+        if (consumoEnergetico >= 'A' && consumoEnergetico <= 'F'){
+            return consumoEnergetico;
         }else {
             return 'F';
         }
