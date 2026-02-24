@@ -1,5 +1,6 @@
 package Primer_trimestre.Tema_4.Excepciones.Ejercicio3;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class PruebaConScanner {
@@ -8,10 +9,11 @@ public class PruebaConScanner {
 
         try{
             int numero=scanner.nextInt();
-            if (numero < 0){
-                System.out.println("el numero no es positivo");
-            }
-        }finally {
+            System.out.println(numero);
+        }catch (InputMismatchException e){
+            System.out.println("No has introducido un entero");
+        }
+        finally {
             scanner.close();
         }
     }
