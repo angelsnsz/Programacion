@@ -18,7 +18,7 @@ public class Camion extends Vehiculo implements Transportable{
 
 
     public void viajar(double distancia) {
-        double consumo= 0.1*
+        double consumo= 0.1;
 
     }
 }
