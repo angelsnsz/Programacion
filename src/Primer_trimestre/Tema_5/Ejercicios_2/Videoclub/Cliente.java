@@ -1,4 +1,4 @@
-package Primer_trimestre.Tema_5.prueba.Videoclub;
+package Primer_trimestre.Tema_5.Ejercicios_2.Videoclub;
 
 public class Cliente {
     int numeroCarnet;
