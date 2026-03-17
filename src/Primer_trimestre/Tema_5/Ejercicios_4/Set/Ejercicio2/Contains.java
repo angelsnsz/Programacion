@@ -24,8 +24,7 @@ public class Contains {
         System.out.println("Escribe un numero de 5 digitos:");
         int numero= sc.nextInt();
         sc.close();
-        boolean acceso= ids.contains(numero);
-        System.out.println(acceso);
+        System.out.println(ids.contains(numero)? "El id está en la lista":"El id no esta en la lista");
 
 
     }
