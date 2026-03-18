@@ -1,7 +1,5 @@
 package Primer_trimestre.Tema_5.Ejercicios_3.TiendaVideojuegos;
 
-import Primer_trimestre.Tema_5.Ejercicios_2.Videoclub.Cliente;
-
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
@@ -38,7 +36,6 @@ public class Venta {
                 ventasFecha.add(v);
             }
         }
-
         return ventasFecha;
     }
 }
