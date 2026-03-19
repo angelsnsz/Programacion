@@ -12,47 +12,20 @@ public class Videojuego {
     int stock;
     UUID uuid;
 
-    static List<Videojuego> videojuegos = new ArrayList<>();
     public Videojuego(String titulo, String plataforma, String genero, double precio, int stock, UUID uuid) {
         this.titulo = titulo;
         this.plataforma = plataforma;
         this.genero = genero;
         this.precio = precio;
         this.stock = stock;
-        this.uuid = uuid;
+        this.uuid = UUID.randomUUID();
     }
 
-    private UUID generaruuid() {
-        return UUID.randomUUID();
-    }
+    public UUID getId() { return uuid; }
+    public String getTitulo() { return titulo; }
+    public int getStock() { return stock; }
 
-    public List<Videojuego> mostrarInventario() {
-        return videojuegos;
-    }
-
-    public static Videojuego buscarPorUUID(UUID id) {
-        for (Videojuego v : videojuegos) {
-            if (v.uuid == id) {
-                return v;
-            }
-        }
-        return null;
-    }
-    public static Videojuego buscarPorTitulo(String nombre) {
-        for (Videojuego v : videojuegos) {
-            if (v.titulo.equalsIgnoreCase(nombre)) {
-                return v;
-            }
-        }
-
-        return null;
-    }
-
-    public int getStock() {
-        return stock;
-    }
-
-    public void comprar() {
-        this.stock--;
+    public void reducirStock(int cantidad) {
+        this.stock -= cantidad;
     }
 }

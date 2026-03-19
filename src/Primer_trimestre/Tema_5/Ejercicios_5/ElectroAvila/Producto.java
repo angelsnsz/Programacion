@@ -27,5 +27,17 @@ public class Producto {
 
     // TODO: TAREA DEL ALUMNO
     // Implementar equals y hashCode basándose ÚNICAMENTE en el 'id'.
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Producto producto = (Producto) o;
+        return id.equals(producto.id);
+    }
+
+    @Override
+    public int hashCode() {
+        return id.hashCode();
+    }
     // Recordad que sin esto, el Set no detectará duplicados.
 }

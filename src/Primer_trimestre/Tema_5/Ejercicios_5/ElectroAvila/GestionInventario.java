@@ -17,18 +17,25 @@ public class GestionInventario {
 
         // TODO: TAREA 1 - Eliminar duplicados usando un Set
         // Pista: El Set usará vuestro método equals/hashCode[cite: 2696].
-        Set<Producto> productosUnicos = null; // Completar
+        Set<Producto> productosUnicos = new HashSet<>(entradaAlmacen);
 
         // TODO: TAREA 2 - Volver a pasar a una List para poder ordenar
-        List<Producto> listaLimpia = null; // Completar
+        List<Producto> listaLimpia =  new ArrayList<>(productosUnicos);
 
         // TODO: TAREA 3 - Filtrar y Transformar
         // Quedarse solo con los de precioBase > 300 y subirles el precio un 21% (IVA).
-
+        for (Producto p : listaLimpia) {
+            if (p.getPrecioBase() > 300) {
+                p.setPrecioBase(p.getPrecioBase() * 1.21);
+            }
+        }
         // TODO: TAREA 4 - Ordenar por Stock de mayor a menor
         // Podéis usar lista.sort() con un Comparator[cite: 206].
-
+        listaLimpia.sort((p1, p2) -> Integer.compare(p2.getStock(), p1.getStock()));
         System.out.println("\n--- INVENTARIO FINAL (Precio > 300€, con IVA, ordenado por Stock) ---");
         // Imprimir el resultado final
+        for (Producto p : listaLimpia) {
+            System.out.println(p);
+        }
     }
 }
