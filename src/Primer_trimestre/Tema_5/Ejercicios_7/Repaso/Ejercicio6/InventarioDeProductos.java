@@ -1,4 +1,7 @@
 package Primer_trimestre.Tema_5.Ejercicios_7.Repaso.Ejercicio6;
+
+import java.util.HashMap;
+
 /*
 Ejercicio 6: HashMap - Inventario de productos
 

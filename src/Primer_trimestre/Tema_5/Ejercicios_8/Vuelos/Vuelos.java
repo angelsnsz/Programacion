@@ -74,47 +74,46 @@ public class Vuelos {
 
         // TODO - Mostrar el precio del billete más caro
         System.out.printf(
-                "El billete más caro ha sido de %.2f %n",
-                getBilleteMasCaro(vuelosPasajerosCoste)
+                "El billete más caro ha sido de %.2f %n", getBilleteMasCaro(vuelosPasajerosCoste)
         );
 
         // TODO - Crear un Map que la clave sea el vuelo y el value el precio medio del billete
         System.out.println(
-                "El precio medio de cada vuelo ha sido " +
-                        getPreciosMedios(vuelosPasajerosCoste)
+                "El precio medio de cada vuelo ha sido " + getPreciosMedios(vuelosPasajerosCoste)
         );
 
         // TODO - Crear un MAP que la clave sea el DNI y el value el precio que se ha gastado en billetes
         System.out.println(
-                "El gasto por cada pasajero ha sido de " +
-                        getGastoPorDNI(vuelosPasajerosCoste)
+                "El gasto por cada pasajero ha sido de " + getGastoPorDNI(vuelosPasajerosCoste)
         );
     }
 
-    public static Set<String> getIdentificadoresVuelos(
-            Map<String, Map<String, Double>> vuelosPasajerosCoste
-    ) {
+    public static Set<String> getIdentificadoresVuelos(Map<String, Map<String, Double>> vuelosPasajerosCoste) {
+        for (){
+            return vuelosPasajerosCoste.keySet();
+        }
         // TODO
-        return null;
     }
 
-    public static Double getBilleteMasCaro(
-            Map<String, Map<String, Double>> vuelosPasajerosCoste
-    ) {
+    public static Double getBilleteMasCaro(Map<String, Map<String, Double>> vuelosPasajerosCoste) {
+
         // TODO
+
+        for (int i =0; i<vuelosPasajerosCoste.size();i++){
+
+        }
+
         return 0.0;
     }
 
-    public static Map<String, Double> getPreciosMedios(
-            Map<String, Map<String, Double>> vuelosPasajerosCoste
-    ) {
+    public static Map<String, Double> getPreciosMedios(Map<String, Map<String, Double>> vuelosPasajerosCoste) {
+
         // TODO
         return null;
     }
 
-    public static Map<String, Double> getGastoPorDNI(
-            Map<String, Map<String, Double>> vuelosPasajerosCoste
-    ) {
+    public static Map<String, Double> getGastoPorDNI(Map<String, Map<String, Double>> vuelosPasajerosCoste) {
+
         // TODO
         return null;
     }
