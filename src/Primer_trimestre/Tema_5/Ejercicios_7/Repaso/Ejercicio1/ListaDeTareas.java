@@ -1,4 +1,7 @@
 package Primer_trimestre.Tema_5.Ejercicios_7.Repaso.Ejercicio1;
+
+import java.util.ArrayList;
+
 /*
 Ejercicio 1: ArrayList - Lista de tareas
 
@@ -8,5 +11,7 @@ Muestra todas las tareas.
 Elimina la segunda tarea y muestra la lista actualizada.
  */
 public class ListaDeTareas {
+    public static void main(String[] args) {
 
+    }
 }
