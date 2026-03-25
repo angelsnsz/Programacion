@@ -1,5 +1,7 @@
 package Primer_trimestre.Tema_5.Ejercicios_10.AnalizadorCiberseguridad;
 
+import java.util.Objects;
+
 public abstract class Log {
 
     int idLog;
@@ -17,13 +19,17 @@ public abstract class Log {
     // TODO
     @Override
     public boolean equals(Object o) {
-        return false;
+        if (!(o instanceof Log log)) return false;
+        return idLog == log.idLog;
     }
 
     // TODO
     @Override
     public int hashCode() {
-        return 0;
+        return Objects.hashCode(idLog);
     }
 
+    public String toString() {
+        return "[" + idLog + ", " + ipOrigen + ", " + ubicacion + "]";
+    }
 }

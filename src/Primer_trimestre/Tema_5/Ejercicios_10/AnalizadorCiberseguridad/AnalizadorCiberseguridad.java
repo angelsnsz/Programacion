@@ -31,10 +31,13 @@ public class AnalizadorCiberseguridad {
         // T2: Mapa de frecuencia de IPs (¿Qué IP ataca más?)
         Map<String, Integer> ataquesPorIP = new HashMap<>();
         // TODO: Rellenar el mapa: IP -> Cantidad de apariciones
-        for (Log log : logsUnicos){
-            String ip=log.ipOrigen;
-            int ocurrencias = ataquesPorIP.getOrDefault(ip,0);
-            ataquesPorIP.put(ip,ocurrencias + 1);
+        for (Log l : logsUnicos) {
+            String ip = l.ipOrigen;
+            if (ataquesPorIP.containsKey(ip)) {
+                ataquesPorIP.put(ip, ataquesPorIP.get(ip) + 1);
+            } else {
+                ataquesPorIP.put(ip, 1);
+            }
         }
 
         // T3: Agrupar Logs únicos por NIVEL DE RIESGO (Map de Listas)
@@ -58,10 +61,10 @@ public class AnalizadorCiberseguridad {
         // T4: Extraer IDs de cámaras que necesitan revisión (Solo si son LogCamara)
         Set<Integer> idsRevisionVisual = new TreeSet<>(); // TreeSet para que salgan ordenados
         // TODO: Usar instanceof y casting para filtrar solo LogCamara e insertar sus IDs
-        for (Log logs:logsUnicos){
-         if(logs instanceof LogCamara){
-             System.out.println(logs.ubicacion);
-         }
+        for (Log l : logsUnicos) {
+            if (l instanceof LogCamara) {
+                idsRevisionVisual.add(l.idLog);
+            }
         }
 
         // --- SALIDA DE RESULTADOS ---
