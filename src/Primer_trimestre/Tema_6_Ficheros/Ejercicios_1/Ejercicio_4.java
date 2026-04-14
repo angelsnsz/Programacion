@@ -13,5 +13,7 @@ Acción: 1. Lee el archivo productos.csv línea a línea.
 4. Muestra la lista de productos por pantalla aplicando un formato de tabla limpio.
  */
 public class Ejercicio_4 {
+    public static void main(String[] args) {
 
+    }
 }

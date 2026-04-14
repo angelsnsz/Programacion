@@ -12,5 +12,7 @@ mostrar un mensaje amigable al usuario: "Error: El archivo de origen no se ha en
  escritura se cierren automáticamente, ocurra o no un error.
  */
 public class Ejercicio_5 {
+    public static void main(String[] args) {
 
+    }
 }

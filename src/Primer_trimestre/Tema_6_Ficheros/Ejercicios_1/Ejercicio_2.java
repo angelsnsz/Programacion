@@ -10,5 +10,7 @@ Acción: 1. Cada frase introducida se debe guardar en un archivo llamado diario.
 3. Asegúrate de que si ejecutas el programa dos veces, las frases nuevas se añadan debajo de las antiguas sin borrar las anteriores (modo append).
  */
 public class Ejercicio_2 {
+    public static void main(String[] args) {
 
+    }
 }

@@ -10,5 +10,7 @@ Acción: 1. Comprueba si la carpeta ya existe. Si no existe, créala.
 3. Lista por consola el contenido de MiDirectorioDAM, mostrando el nombre de cada archivo y su tamaño en bytes.
  */
 public class Ejercicio_1 {
+    public static void main(String[] args) {
 
+    }
 }

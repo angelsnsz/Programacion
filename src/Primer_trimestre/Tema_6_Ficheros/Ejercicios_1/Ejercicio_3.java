@@ -16,5 +16,7 @@ Cuenta y muestra al final cuántas líneas en total tiene el archivo.
 Cuenta y muestra cuántas veces aparece la vocal "a" (mayúscula o minúscula) en todo el texto.
  */
 public class Ejercicio_3 {
+    public static void main(String[] args) {
 
+    }
 }
