@@ -6,17 +6,20 @@ import java.util.Scanner;
 
 public class Ejercicio_1 {
     public static void main(String[] args) {
-        System.out.println("Escribe el nombre de un archivo");
-        Scanner sc= new Scanner(System.in);
-        String nombre= sc.next();
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Introduce el nombre de un archivo");
+        String nombre = sc.nextLine();
         sc.close();
 
         try {
-            File fichero = new File(nombre);
-            if (!fichero.exists()) fichero.createNewFile();
-            else System.out.println(fichero.getAbsolutePath());
+            File file = new File(nombre);
+            if (!file.exists())
+                file.createNewFile();
+            else
+                System.out.println(file.getAbsolutePath());
         } catch (IOException e) {
-            System.out.println("Error al crear el archivo" + e.getMessage());;
+            System.out.println("Error al crear el archivo, " + e.getMessage());
         }
+
     }
 }

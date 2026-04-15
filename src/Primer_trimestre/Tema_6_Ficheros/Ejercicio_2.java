@@ -8,24 +8,26 @@ import java.util.Scanner;
 
 public class Ejercicio_2 {
     public static void main(String[] args) {
-        System.out.println("Escribe el nombre de un archivo");
-        Scanner sc= new Scanner(System.in);
-        String nombre= sc.next();
-        sc.close();
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Introduce el nombre de un archivo");
+        String nombre = sc.nextLine();
 
         try {
-            File fichero = new File(nombre);
-            if (!fichero.exists()) fichero.createNewFile();
+            File file = new File(nombre);
+            if (!file.exists())
+                file.createNewFile();
 
-            try (BufferedWriter bw= new BufferedWriter(new FileWriter(fichero))){
-                System.out.println("Escribe una linea");
-                bw.write(sc.next());
-                bw.newLine();
-                bw.write(sc.next());
+            try (BufferedWriter bw = new BufferedWriter(new FileWriter(file))) {
+                System.out.println("Introduce una linea");
+                String linea = sc.nextLine();
+                bw.write(linea);
             }
+
         } catch (IOException e) {
-            System.out.println("Error al crear el archivo" + e.getMessage());;
+            System.out.println("Error al crear el archivo, " + e.getMessage());
         }
 
+        sc.close();
     }
 }

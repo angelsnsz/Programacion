@@ -7,7 +7,8 @@ Contexto: Crea un archivo productos.csv con el siguiente formato: ID;Nombre;Prec
 
 Tarea: Crea una clase Producto con esos tres atributos.
 
-Acción: 1. Lee el archivo productos.csv línea a línea.
+Acción:
+1. Lee el archivo productos.csv línea a línea.
 2. Utiliza el método .split(";") para separar los datos.
 3. Crea un objeto Producto por cada línea y guárdalo en un ArrayList<Producto>.
 4. Muestra la lista de productos por pantalla aplicando un formato de tabla limpio.
