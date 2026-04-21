@@ -20,6 +20,5 @@ public class Ejercicio_1 {
         } catch (IOException e) {
             System.out.println("Error al crear el archivo, " + e.getMessage());
         }
-
     }
 }
