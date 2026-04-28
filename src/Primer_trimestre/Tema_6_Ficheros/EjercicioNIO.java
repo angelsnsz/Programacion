@@ -16,6 +16,5 @@ public class EjercicioNIO {
         } catch (IOException e) {
             System.err.println("Error al guardar el archivo, " + e.getMessage());
         }
-
     }
 }

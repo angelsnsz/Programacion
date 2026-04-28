@@ -29,8 +29,6 @@ public class GestorInstituto {
         // Aquí iremos probando los métodos paso a paso
         conectar();
         System.out.println("Estamos conectados a la base de datos");
-
-
         desconectar();
     }
     public static void conectar(){
@@ -40,7 +38,7 @@ public class GestorInstituto {
         }catch (ClassNotFoundException e){
             System.err.println("No se ha encontrado el driver de MySQL");
         }catch (SQLException ex){
-            System.err.println("Error de SQL al conectar :: " + e.getMessage());
+            System.err.println("Error de SQL al conectar :: " + ex.getMessage());
         }
     }
     public static  void desconectar(){
@@ -51,9 +49,14 @@ public class GestorInstituto {
         }
     }
     public static void mostrarAlumnos(){
-        try{
-            Statement stmt= conexion.createStatement();
-
+        try {
+            Statement stmt = conexion.createStatement();
+            ResultSet rs = stmt.executeQuery("SELECT * FROM alumnos");
+            while (rs.next()) {
+                System.out.println(rs.getInt("id") + " - " + rs.getString("nombre"));
+            }
+        } catch (SQLException e) {
+            System.err.println("Error al mostrar los alumnos, " + e.getMessage());
         }
     }
     public static void registrarAlumno(String nombre, String email) throws SQLException{
@@ -68,7 +71,13 @@ public class GestorInstituto {
         }
     }
     public static void matricularAlumno(int idAlumno, int idAsignatura){
-
-
+        try {
+            PreparedStatement statement = conexion.prepareStatement("INSERT INTO matriculas(id_alumno, id_asignatura) VALUES (?, ?)");
+            statement.setInt(1, idAlumno);
+            statement.setInt(2, idAsignatura);
+            int filas = statement.executeUpdate();
+        } catch (SQLException e) {
+            System.err.println("Error al instertar la matricula, " + e.getMessage());
+        }
     }
 }

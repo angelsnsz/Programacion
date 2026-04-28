@@ -55,7 +55,6 @@ public class Peonadas {
 
                 for (int i = 1; i < partes.length; i++) {
                     String trabajador = partes[i];
-
                     datos.get(anio).putIfAbsent(trabajador, new int[12]);
                     datos.get(anio).get(trabajador)[mes]++;
                 }
