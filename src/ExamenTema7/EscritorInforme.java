@@ -20,13 +20,7 @@ public class EscritorInforme {
         lineas.add("INFORME DE PEONADAS - AYUNTAMIENTO DE TOLEDO");
 
         lineas.add(
-                "Fecha de generación: "
-                        + LocalDate.now()
-                        .format(
-                                DateTimeFormatter.ofPattern(
-                                        "dd/MM/yyyy"
-                                )
-                        )
+                "Fecha de generación: " + LocalDate.now().format(DateTimeFormatter.ofPattern("dd/MM/yyyy"))
         );
 
         lineas.add("==========================================");
@@ -34,12 +28,7 @@ public class EscritorInforme {
         lineas.add("");
 
         lineas.add(
-                String.format(
-                        "%-25s %-12s %-12s",
-                        "Empleado",
-                        "Jornadas",
-                        "Total horas"
-                )
+                String.format("Empleado", "Jornadas", "Total horas")
         );
 
         lineas.add("------------------------------------------------");
@@ -49,12 +38,7 @@ public class EscritorInforme {
         for (ResumenEmpleado r : lista) {
 
             lineas.add(
-                    String.format(
-                            "%-25s %-12d %-12d",
-                            r.getNombreEmpleado(),
-                            r.getJornadas(),
-                            r.getTotalHoras()
-                    )
+                    String.format(r.getNombreEmpleado(), r.getJornadas(), r.getTotalHoras())
             );
 
             totalHoras += r.getTotalHoras();
@@ -72,10 +56,7 @@ public class EscritorInforme {
 
             Path ruta = Path.of(fichero);
 
-            Files.write(
-                    ruta,
-                    lineas
-            );
+            Files.write(ruta, lineas);
 
         } catch (IOException e) {
 

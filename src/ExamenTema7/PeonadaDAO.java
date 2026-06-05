@@ -22,8 +22,7 @@ public class PeonadaDAO {
     public void insertarPeonadas(
             List<Peonada> lista) {
 
-        String borrar =
-                "DELETE FROM Peonadas";
+        String borrar = "DELETE FROM Peonadas";
 
         String insertar =
                 """
@@ -38,32 +37,21 @@ public class PeonadaDAO {
 
             try {
 
-                try (Statement st =
-                             con.createStatement()) {
-
+                try (Statement st = con.createStatement()) {
                     st.executeUpdate(borrar);
                 }
 
-                try (PreparedStatement ps =
-                             con.prepareStatement(insertar)) {
+                try (PreparedStatement ps = con.prepareStatement(insertar)) {
 
                     for (Peonada p : lista) {
 
-                        ps.setObject(
-                                1,
-                                p.getFecha());
+                        ps.setObject(1, p.getFecha());
 
-                        ps.setString(
-                                2,
-                                p.getNombreEmpleado());
+                        ps.setString(2, p.getNombreEmpleado());
 
-                        ps.setString(
-                                3,
-                                p.getParque());
+                        ps.setString(3, p.getParque());
 
-                        ps.setInt(
-                                4,
-                                p.getHoras());
+                        ps.setInt(4, p.getHoras());
 
                         ps.executeUpdate();
                     }

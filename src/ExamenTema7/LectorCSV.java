@@ -14,15 +14,13 @@ public class LectorCSV {
 
         List<Peonada> lista = new ArrayList<>();
 
-        DateTimeFormatter formato =
-                DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        DateTimeFormatter formato = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 
         try {
 
             Path ruta = Path.of(fichero);
 
-            List<String> lineas =
-                    Files.readAllLines(ruta);
+            List<String> lineas = Files.readAllLines(ruta);
 
             for (int i = 1; i < lineas.size(); i++) {
 
@@ -30,31 +28,20 @@ public class LectorCSV {
 
                 try {
 
-                    String[] campos =
-                            linea.split(";");
+                    String[] campos = linea.split(";");
 
                     if (campos.length != 4) {
                         throw new IllegalArgumentException();
                     }
 
-                    LocalDate fecha =
-                            LocalDate.parse(
-                                    campos[0],
-                                    formato);
-
+                    LocalDate fecha = LocalDate.parse(campos[0], formato);
                     String nombre = campos[1];
                     String parque = campos[2];
                     int horas =
-                            Integer.parseInt(
-                                    campos[3]);
+                            Integer.parseInt(campos[3]);
 
                     lista.add(
-                            new Peonada(
-                                    fecha,
-                                    nombre,
-                                    parque,
-                                    horas
-                            )
+                            new Peonada(fecha,nombre, parque, horas)
                     );
 
                 } catch (Exception e) {

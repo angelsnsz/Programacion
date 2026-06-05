@@ -6,10 +6,7 @@ public class ResumenEmpleado {
     private int jornadas;
     private int totalHoras;
 
-    public ResumenEmpleado(String nombreEmpleado,
-                           int jornadas,
-                           int totalHoras) {
-
+    public ResumenEmpleado(String nombreEmpleado, int jornadas, int totalHoras) {
         this.nombreEmpleado = nombreEmpleado;
         this.jornadas = jornadas;
         this.totalHoras = totalHoras;
