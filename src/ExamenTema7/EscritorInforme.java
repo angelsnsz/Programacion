@@ -27,9 +27,7 @@ public class EscritorInforme {
 
         lineas.add("");
 
-        lineas.add(
-                String.format("Empleado", "Jornadas", "Total horas")
-        );
+        lineas.add("Empleado\tJornadas\tTotal horas");
 
         lineas.add("------------------------------------------------");
 
@@ -37,9 +35,7 @@ public class EscritorInforme {
 
         for (ResumenEmpleado r : lista) {
 
-            lineas.add(
-                    String.format(r.getNombreEmpleado(), r.getJornadas(), r.getTotalHoras())
-            );
+            lineas.add(r.getNombreEmpleado() + "\t" + r.getJornadas() + "\t" + r.getTotalHoras());
 
             totalHoras += r.getTotalHoras();
         }

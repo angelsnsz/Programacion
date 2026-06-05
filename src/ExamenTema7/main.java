@@ -19,7 +19,7 @@ public class main {
 
         EscritorInforme escritor = new EscritorInforme();
 
-        escritor.generarInforme(resumen, "informe.txt");
+        escritor.generarInforme(resumen, "informe2.txt");
 
         System.out.println("Informe generado correctamente.");
     }

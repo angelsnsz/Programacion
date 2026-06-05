@@ -1,0 +1,15 @@
+==========================================
+INFORME DE PEONADAS - AYUNTAMIENTO DE TOLEDO
+Fecha de generación: 05/06/2026
+==========================================
+
+Empleado	Jornadas	Total horas
+------------------------------------------------
+Ana García	10	72
+Luis Pérez	8	56
+Pedro Jiménez	7	55
+Marta Gómez	7	47
+------------------------------------------------
+Total empleados: 4
+Total horas globales: 230
+==========================================
